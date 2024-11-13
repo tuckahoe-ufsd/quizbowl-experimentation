@@ -1,21 +1,10 @@
-const button = document.querySelector('.button'); 
-const  document.getElementById('message').innerText = displayMessage;
-
+let score = 0; 
 let isCorrect = true;
+let answerList = ['1', '2', '3'];
+const button = document.querySelector('#button'); 
+const question = document.querySelector('.questions');
+//const question = document.querySelector('.shell');
 
 button.addEventListener('click', () => {
-    if (isCorrect) {
-         displayMessage = "Correct";
-         console.log("meeeeeh");
-    } else {
-        displayMessage = "Wrong, Try Again";
-        console.log("meeeeeh");
-}
-    isCorrect = !isCorrect;
+    console.log("yipee");
 });
-
-let answerList = ['1', '2', '3']
-const question = document.querySelector('.shell')
-question.textContent = answerList[0]
-
-let score = 0; 
