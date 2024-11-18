@@ -54,4 +54,6 @@ button {
     padding-top: 35px; 
 }
 
-
+button:hover {
+    background-color: rgb(21, 85, 168);
+  }
