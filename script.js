@@ -4,14 +4,15 @@ let score = 0;
 let questionIndex = 0; 
 
 const question = document.querySelector('.questioncon'); 
-const button = document.querySelector('button'); 
+const button1 = document.getElementById('button1'); 
+const button2 = document.getElementById('button2'); 
 const input = document.querySelector('#input-field'); 
 let scoreContainer = document.querySelector('.scorecon');
 
 question.textContent = questionList[questionIndex];
 
 let submitFunction = () =>{
-    button.addEventListener('click', () =>{
+    button1.addEventListener('click', () =>{
         if(input.value === answerList[questionIndex]){
             questionIndex += 1; 
             score += 1; 
@@ -31,8 +32,19 @@ let endGame = () =>{
         scoreContainer.textContent = "Final Score: " + score; 
         question.textContent = "Congratulations, play again!"; 
         input.style.display = "none"; 
-        button.style.display = "none"; 
+        button1.style.display = "none"; 
+        button2.style.display = "none";
     }
 }
 
 submitFunction(); 
+
+let skipFunction = () =>{
+    button2.addEventListener('click', () =>{
+        questionIndex += 1; 
+            score += 1; 
+            question.textContent = questionList[questionIndex];
+        });
+    }
+
+skipFunction(); 
